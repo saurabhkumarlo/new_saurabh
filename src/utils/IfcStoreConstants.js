@@ -1,0 +1,4 @@
+export const MAX_VOLUME_VALUE = 10000000;
+export const DIVIDER_CONST_M1 = 1000;
+export const DIVIDER_CONST_M2 = 1000000;
+export const DIVIDER_CONST_M3 = 1000000000;

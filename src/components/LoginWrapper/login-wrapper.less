@@ -1,0 +1,164 @@
+@import "../../theme/helpers/colors";
+@import "../../theme/helpers/dimensions";
+
+.LoginWrapper {
+    &_Card {
+        width: 400px;
+        box-shadow: 0 0 10px 10px rgba(@venta-9, 0.25);
+        border-radius: @border-radius-sm;
+        border: none;
+        padding: @spacing * 3;
+
+        &_Horizontal {
+            width: 864px;
+        }
+
+        &_Button {
+            width: 100%;
+            margin-top: @spacing * 3;
+            border-radius: @border-radius-xs;
+            border: none;
+            height: 30px;
+            color: @venta-0;
+            cursor: pointer;
+
+            &:focus,
+            &:hover {
+                background-color: darken(@primary-color, 10%);
+                outline: none;
+            }
+
+            &_Default {
+                color: @green-5;
+
+                &:hover {
+                    color: @venta-1;
+                }
+                box-shadow: none;
+            }
+
+            &_Disabled {
+                &:disabled {
+                    background-color: transparent;
+                }
+            }
+        }
+
+        &_GeometraLogo {
+            margin: auto;
+            width: 44px;
+            height: 44px;
+
+            &_Horizontal {
+                width: 44px;
+                height: 44px;
+                margin: unset;
+            }
+        }
+
+        &_Title {
+            width: 100%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: @spacing;
+            font-size: 24px;
+
+            &_Horizontal {
+                display: flex;
+                align-items: center;
+                font-size: 24px;
+                margin-left: @spacing * 2;
+            }
+        }
+
+        &_Title_Container {
+            margin-bottom: @spacing * 2;
+            font-weight: 400;
+            display: flex;
+            flex-direction: column;
+
+            &_Horizontal {
+                font-weight: 400;
+                margin-bottom: @spacing * 3;
+                display: flex;
+                flex-direction: row;
+            }
+        }
+    }
+
+    &_Wrapper {
+        background-image: url(../../assets/login-background.png);
+        display: grid;
+        grid-template-rows: calc(100vh - 120px) 120px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+
+        > * {
+            margin: auto;
+        }
+    }
+
+    &_RukkorLogo {
+        width: 108px;
+        height: 34px;
+    }
+
+    &_LanguageSelect {
+        > .ant-select-selector {
+            background: none !important;
+            color: @venta-3;
+        }
+
+        &_Option {
+            &_Icon {
+                margin-left: -@spacing * 2;
+                margin-right: @spacing;
+
+                &--selected {
+                    color: @primary-color;
+                    margin-left: -@spacing * 2;
+                }
+            }
+        }
+
+        &_Icon {
+            color: @venta-3;
+            margin-top: -@spacing * 0.8;
+            margin-left: @spacing * 1.8;
+        }
+
+        &_Wrapper {
+            position: absolute;
+            left: 50px;
+            bottom: 35px;
+        }
+    }
+
+    .ant-select-item {
+        position: static;
+        background: none !important;
+        margin-left: @spacing * 1.5;
+    }
+}
+
+.ant-select-dropdown-placement-topLeft.ant-select-dropdown {
+    border-radius: 12px;
+    padding: @spacing @spacing * 1.2;
+    position: relative;
+    max-width: 120px;
+}
+
+.ant-select-item-option-selected:not(.ant-select-item-option-disabled) .ant-select-item-option-state {
+    position: absolute;
+}
+
+.ant-select-focused .ant-select-selector {
+    box-shadow: none !important;
+}
+
+.ant-select-item-option-content {
+    overflow: visible;
+}

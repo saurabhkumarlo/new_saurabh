@@ -1,0 +1,81 @@
+@import "../../../../theme/helpers/colors";
+@import "../../../../theme/helpers/dimensions";
+
+.Calculate_Submenu {
+    width: 100%;
+
+    .ant-menu-item {
+        padding: @spacing * 0.5 @spacing * 0.8;
+    }
+
+    &_Dropdown {
+        min-width: fit-content !important;
+    }
+
+    &_Item {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        &_Label {
+            padding: 0 @spacing * 0.8;
+        }
+
+        &_WrapName {
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+            position: inherit !important;
+            max-width: 145px;
+        }
+    }
+
+    &_Icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: @spacing * 0.5;
+        width: 30px !important;
+        svg {
+            margin: 0 !important;
+        }
+    }
+
+    &_Icon--active {
+        background-color: @venta-2 !important;
+        border-radius: @border-radius-xs;
+        svg {
+            margin: 0 !important;
+        }
+    }
+
+    &_Shortcut {
+        margin-left: auto;
+
+        svg {
+            margin: 0;
+        }
+    }
+
+    .ant-menu-title-content {
+        width: 100%;
+    }
+
+    .ant-menu-item-selected {
+        color: #000;
+        background-color: #fff !important;
+        &:hover {
+            color: @green-5;
+        }
+    }
+}
+.Calculate_Submenu_Checkbox_Group {
+    .ant-checkbox-group {
+        flex-direction: column;
+        display: flex;
+
+        label {
+            padding: @spacing * 0.5 @spacing * 0.8;
+        }
+    }
+}

@@ -1,0 +1,125 @@
+@import "../../../theme/helpers/colors.less";
+@import "../../../theme/helpers/dimensions.less";
+
+.Drive_Tree {
+    background-color: @venta-0;
+    overflow-x: auto;
+    .ant-tree {
+        &-indent-unit {
+            margin-right: -@spacing;
+        }
+
+        &-indent-unit::before {
+            display: none;
+        }
+
+        &-node-content-wrapper {
+            display: flex;
+        }
+
+        &-list-holder-inner {
+            padding-top: @spacing * 0.5;
+            background-color: @venta-0;
+            margin-right: 10px;
+        }
+
+        &-iconEle {
+            display: flex !important;
+            align-items: center;
+            justify-content: center;
+            color: @venta-9;
+            padding-right: @spacing * 0.5;
+            margin-left: -@spacing * 0.5;
+        }
+
+        &-title {
+            color: @venta-9;
+            padding-right: @spacing;
+            margin-right: @spacing;
+            overflow-wrap: none;
+        }
+
+        &-treenode {
+            background-color: @venta-0;
+            padding-left: @spacing * 0.5;
+            margin-left: @spacing * 0.5;
+            margin-right: @spacing * 0.5;
+            padding-bottom: @spacing;
+            padding-top: @spacing * 0.5;
+        }
+    }
+    .ant-tree-treenode.ant-tree-treenode-switcher-close.ant-tree-treenode-selected::before {
+        background-color: @venta-2;
+        border-radius: @border-radius-xs;
+    }
+
+    .ant-tree-treenode.ant-tree-treenode.ant-tree-treenode-switcher-open.ant-tree-treenode-selected::before {
+        background-color: @venta-2;
+        border-radius: @border-radius-xs;
+    }
+
+    .ant-tree-treenode.ant-tree-treenode-switcher-open.ant-tree-treenode-selected.ant-tree-treenode-leaf-last::before {
+        background-color: @venta-2;
+        border-radius: @border-radius-xs;
+    }
+
+    .ant-tree-switcher-line-icon {
+        top: 4px;
+        left: 0px;
+        position: absolute;
+    }
+
+    .ant-tree-list-holder-inner {
+        margin-right: 0;
+        min-width: max-content;
+    }
+    .ant-tree-list-holder {
+        height: 100%;
+    }
+}
+.Tree {
+    &_Item_Wrapper {
+        display: flex;
+
+        label {
+            margin-right: 17px;
+            cursor: pointer;
+        }
+    }
+
+    &_Status {
+        position: absolute;
+        right: 5px;
+        top: 1px;
+    }
+
+    &_Icon {
+        right: 5px;
+        top: 4px;
+        position: absolute;
+    }
+
+    &_Status_Icon {
+        margin-left: @spacing * 0.5;
+    }
+
+    &_Circle_Icon {
+        color: @venta-5;
+    }
+
+    &_Adjust_Icon {
+        color: @yellow-5;
+    }
+
+    &_QuestionCircle_Icon {
+        color: @blue-5;
+    }
+
+    &_CheckCircle_Icon {
+        color: @green-5;
+    }
+}
+
+.ant-tree-switcher-leaf-line {
+    display: none;
+}

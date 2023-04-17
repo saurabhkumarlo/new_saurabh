@@ -1,0 +1,39 @@
+@import "../theme/helpers/colors";
+@import "../theme/helpers/dimensions";
+
+.Sidebar {
+    width: 50px;
+    text-align: center;
+    background: @venta-1;
+    height: 100%;
+
+    &_Button {
+        margin-top: @spacing * 2;
+
+        &:disabled &_Icon {
+            color: lighten(@venta-9, 50%);
+        }
+
+        &:focus {
+            border-bottom-color: @green-5;
+            border-bottom-width: 1px;
+        }
+
+        &:hover {
+            border-bottom-color: lighten(@venta-9, 50%);
+            border-bottom-width: 1px;
+        }
+
+        &_Icon {
+            color: @venta-9;
+        }
+        &_Icon_disabled {
+            color: @venta-9;
+            opacity: 50%;
+        }
+        &--active {
+            border-bottom-color: @green-5;
+            border-bottom-width: 1px;
+        }
+    }
+}

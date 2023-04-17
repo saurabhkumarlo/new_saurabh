@@ -1,0 +1,107 @@
+{
+    "folder": {
+        "types": ["folder"],
+        "fileExtensions": [],
+        "humanName": "Folder",
+        "icon": "folder"
+    },
+    "json": {
+        "types": ["application/json"],
+        "fileExtensions": ["json"],
+        "humanName": "JSON File"
+    },
+    "txt": {
+        "types": ["text/plain"],
+        "fileExtensions": ["txt"],
+        "humanName": "Text File",
+        "icon": "file-text"
+    },
+    "pdf": {
+        "types": ["application/pdf"],
+        "fileExtensions": ["pdf"],
+        "humanName": "PDF File",
+        "icon": "file-pdf"
+    },
+    "ifc": {
+        "types": ["application/ifc"],
+        "fileExtensions": ["ifc"],
+        "humanName": "IFC File",
+        "icon": "file-ifc"
+    },
+    "gif": {
+        "types": ["image/gif"],
+        "fileExtensions": ["gif"],
+        "humanName": "GIF File",
+        "icon": "file-gif",
+        "image": true
+    },
+    "png": {
+        "types": ["image/png"],
+        "fileExtensions": ["png"],
+        "humanName": "PNG File",
+        "icon": "file-image",
+        "image": true
+    },
+    "jpeg": {
+        "types": ["image/jpeg"],
+        "fileExtensions": ["jpg", "jpeg"],
+        "humanName": "JPG File",
+        "icon": "file-jpg",
+        "image": true
+    },
+    "bmp": {
+        "types": ["image/bmp"],
+        "fileExtensions": ["bmp"],
+        "humanName": "BMP File",
+        "icon": "file-image",
+        "image": true
+    },
+    "tiff": {
+        "types": ["image/tiff"],
+        "fileExtensions": ["tiff"],
+        "humanName": "TIFF File",
+        "icon": "file-image",
+        "image": true
+    },
+    "webp": {
+        "types": ["image/webp"],
+        "fileExtensions": ["webp"],
+        "humanName": "WebP File",
+        "icon": "file-image",
+        "image": true
+    },
+    "pptx": {
+        "types": [
+            "application/vnd.ms-powerpoint",
+            "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+            "application/vnd.oasis.opendocument.presentation"
+        ],
+        "fileExtensions": ["ppt", "pptx", "odp"],
+        "humanName": "Powerpoint File",
+        "icon": "file-ppt"
+    },
+    "excel": {
+        "types": ["application/vnd.ms-excel", "application/vnd.oasis.opendocument.spreadsheet"],
+        "fileExtensions": ["xls", "ods"],
+        "humanName": "Excel File",
+        "icon": "file-excel"
+    },
+    "word": {
+        "types": ["application/msword", "application/vnd.oasis.opendocument.text"],
+        "fileExtensions": ["doc", "odt"],
+        "humanName": "Word File",
+        "icon": "file-word"
+    },
+    "docx": {
+        "types": ["application/vnd.openxmlformats-officedocument.wordprocessingml.document"],
+        "fileExtensions": ["docx"],
+        "humanName": "Word File",
+        "icon": "file-docx"
+    },
+    "xlsx": {
+        "types": ["application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"],
+        "fileExtensions": ["xlsx"],
+        "humanName": "Excel File",
+        "icon": "file-xlsx"
+    }
+}

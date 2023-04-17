@@ -1,0 +1,158 @@
+@import "../../theme/helpers/colors";
+@import "../../theme/helpers/dimensions";
+
+.Calculate {
+    display: grid;
+    grid-template-rows: 44px calc(100vh - 44px);
+    height: 100vh;
+
+    &_ScaleContainer {
+        max-width: 122px;
+        display: flex;
+        align-items: center;
+        margin: 0 5px;
+        border: solid 1px @venta-2 !important;
+        padding: 2px;
+        border-radius: 5px;
+        min-width: 5px;
+    }
+
+    &_Layout {
+        display: grid;
+        grid-template-columns: 50px calc(100vw - 50px);
+    }
+
+    &_Wrapper {
+        display: grid;
+        grid-template-rows: 60px calc(100vh - 44px - 60px);
+
+        &_Toolbar {
+            display: flex;
+            justify-content: space-between;
+
+            .ant-divider {
+                margin: 0;
+            }
+
+            .filterAllTreeStatus {
+                position: relative;
+                width: 25%;
+            }
+
+            &_FilterMenu {
+                &_Icon {
+                    color: blue;
+                    float: right;
+                    margin-top: 9px;
+                }
+            }
+
+            &--right {
+                display: flex;
+                align-items: center;
+                justify-content: end;
+                width: 25%;
+            }
+
+            &_Scale {
+                &_Wrapper {
+                    display: flex;
+                    align-items: center;
+                    background-color: @venta-1;
+                    border-radius: @border-radius-xs;
+                    padding-right: 5px;
+                    height: 30px;
+                    margin-right: 14px;
+                }
+
+                &--active {
+                    background-color: @venta-0;
+                    border: 1px solid @venta-1;
+                }
+
+                &_Icon {
+                    width: 35px;
+                    height: 100%;
+                    cursor: pointer;
+                }
+
+                &_Input {
+                    border: none;
+                    background-color: transparent;
+                    box-shadow: none !important;
+                    padding: 0;
+
+                    > .ant-input {
+                        text-align: right;
+                        background-color: transparent;
+                        cursor: pointer;
+                    }
+
+                    > .ant-input-suffix {
+                        cursor: pointer;
+                    }
+
+                    &:focus {
+                        box-shadow: none;
+                    }
+
+                    //Removes arrows from number inputs
+                    /* Chrome, Safari, Edge, Opera */
+                    input::-webkit-outer-spin-button,
+                    input::-webkit-inner-spin-button {
+                        -webkit-appearance: none;
+                        margin: 0;
+                    }
+
+                    /* Firefox */
+                    input[type="number"] {
+                        -moz-appearance: textfield;
+                    }
+                }
+            }
+        }
+
+        &_SplitPane {
+            &--left {
+                position: relative;
+                background-color: @venta-1;
+                border-left: 1px solid rgba(0, 0, 0, 0.2);
+            }
+        }
+
+        &_Progress {
+            &_Wrapper {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100%;
+            }
+        }
+    }
+}
+
+.Show_Scale {
+    visibility: visible;
+}
+
+.Hide_Scale {
+    visibility: hidden;
+}
+
+.Calulate_Data_Loader {
+    position: fixed;
+    z-index: 100;
+    height: 100%;
+    width: 100%;
+    background-color: gray;
+    opacity: 60%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+
+    span {
+        opacity: 1;
+    }
+}

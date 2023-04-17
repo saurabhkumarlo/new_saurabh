@@ -1,0 +1,60 @@
+@import "../../theme/helpers/colors";
+@import "../../theme/helpers/dimensions";
+
+.Modal_Wrapper {
+    .ant-modal-content {
+        border-radius: @border-radius-sm;
+    }
+    .ant-modal-header {
+        border-radius: @border-radius-sm;
+        border-bottom: unset;
+        padding-bottom: 0;
+    }
+    .ant-modal-body {
+        padding-block: 5px;
+        padding-inline: 16px;
+
+        .ant-divider {
+            margin: 0;
+            margin-bottom: 10px;
+            border-top-color: @venta-4;
+        }
+        p {
+            font-size: 14px;
+            margin: 0;
+        }
+
+        input {
+            border: none;
+            border-radius: @border-radius-xs;
+            background-color: @venta-1;
+            margin-bottom: @spacing;
+        }
+    }
+    .ant-modal-footer {
+        border-top: unset;
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 11px;
+
+        .ant-btn {
+            border-radius: @border-radius-xs;
+            padding-inline: 20px;
+            font-size: 12px;
+        }
+
+        .clipboard-btn {
+            background: none;
+            color: inherit;
+            border: none;
+            padding: 0;
+            font: inherit;
+            cursor: pointer;
+            outline: inherit;
+        }
+    }
+
+    .ant-btn-text {
+        color: @green-5;
+    }
+}

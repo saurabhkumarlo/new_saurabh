@@ -1,0 +1,220 @@
+@import "../../theme/helpers/dimensions";
+@import "../../theme/helpers/colors";
+
+.ant-tree.ant-tree-directory {
+    .ant-tree-treenode:hover::before {
+        background-color: @venta-3;
+        border-radius: 4px;
+    }
+}
+
+.Tree {
+    background-color: @venta-0;
+    overflow: auto;
+
+    &_Title {
+        &_Item {
+            display: flex;
+            flex-direction: row;
+        }
+
+        &_Tag {
+            position: absolute;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            width: 45px;
+            border-radius: @border-radius-xs;
+            padding: 0 @spacing * 0.4 0 @spacing * 0.4;
+            margin-left: @spacing * 0.5;
+            text-align: center;
+            right: 30px;
+            top: 5px;
+        }
+
+        &_Statuses {
+            &_TreeStatuses {
+                position: absolute;
+                right: 5px;
+            }
+        }
+
+        &_Elipsis_Icon {
+            position: absolute;
+            font-size: 22px;
+            left: 2px;
+            top: 17px;
+        }
+
+        &_Exclamation_Circle_Icon {
+            color: @red-5;
+            margin-left: @spacing * 0.5;
+            align-self: center;
+        }
+
+        &_Icon {
+            right: 5px;
+            top: 4px;
+            position: absolute;
+        }
+
+        &_Status_Icon {
+            margin-left: @spacing * 0.5;
+        }
+
+        &_Circle_Icon {
+            color: @venta-5;
+        }
+
+        &_Adjust_Icon {
+            color: @yellow-5;
+        }
+
+        &_QuestionCircle_Icon {
+            color: @blue-5;
+        }
+
+        &_CheckCircle_Icon {
+            color: @green-5;
+        }
+
+        &_Lock_Icon {
+            height: 8px;
+            width: 8px;
+            align-self: center;
+            margin-right: @spacing * 0.5;
+        }
+    }
+
+    .Tree_Title_Item > label {
+        cursor: pointer !important;
+    }
+
+    .ant-tree {
+        &-list {
+            .ant-tree-list-scrollbar,
+            .ant-tree-list-scrollbar-show {
+                display: block !important;
+                width: 10px !important;
+                .ant-tree-list-scrollbar-thumb {
+                    background-color: @venta-5 !important;
+                    border-radius: 0 !important;
+                }
+            }
+        }
+        &-node-content-wrapper {
+            padding-left: 2px;
+            padding-top: @spacing * 0.75;
+            padding-right: @spacing * 0.5;
+            padding-bottom: @spacing * 0.75;
+            display: flex;
+        }
+
+        &-list-holder-inner {
+            padding-top: @spacing * 0.5;
+            background-color: @venta-0;
+            margin-right: 10px;
+        }
+
+        &-iconEle {
+            display: flex !important;
+            align-items: center;
+            justify-content: center;
+            color: @venta-9;
+            width: none;
+            height: none;
+            padding-right: @spacing * 0.5;
+        }
+
+        &-indent-unit {
+            margin-right: -@spacing;
+        }
+
+        &-indent-unit::before {
+            display: none;
+        }
+
+        &-title {
+            color: @venta-9;
+            padding-right: @spacing;
+            margin-right: @spacing;
+            overflow-wrap: anywhere;
+        }
+
+        &-switcher {
+            padding-left: @spacing * 0.5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &_open {
+                background-color: @venta-1;
+            }
+
+            &_close {
+                background-color: @venta-1;
+            }
+
+            &-leaf-line {
+                display: none;
+            }
+        }
+
+        &-treenode {
+            background-color: @venta-0;
+            margin-left: @spacing * 0.25;
+            margin-right: @spacing * 0.25;
+        }
+
+        &-checkbox {
+            position: absolute;
+            left: 5px;
+        }
+    }
+}
+.ant-tree-list {
+    height: 100%;
+}
+
+.ant-tree {
+    height: 100%;
+}
+.Inactive {
+    opacity: 0.4;
+}
+
+.ant-popover-inner {
+    border-radius: @border-radius-xs;
+}
+
+.ant-popover {
+    z-index: 1060;
+}
+
+.ant-tree.ant-tree-directory {
+    .ant-tree-treenode-selected .ant-tree-switcher {
+        color: @venta-9;
+        background-color: @venta-3;
+    }
+
+    .ant-tree-treenode-selected::before {
+        color: @venta-9;
+        background-color: @venta-3;
+        border-radius: @border-radius-xs;
+    }
+
+    .ant-tree-treenode-selected:hover::before,
+    .ant-tree-treenode-selected::before {
+        color: @venta-9;
+        background-color: @venta-3;
+        border-radius: @border-radius-xs;
+    }
+
+    .ant-tree-treenode .ant-tree-switcher {
+        background-color: transparent;
+    }
+}
+
+.Italic {
+    font-style: italic;
+}

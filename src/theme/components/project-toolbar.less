@@ -1,0 +1,19 @@
+@import "../../theme/helpers/dimensions";
+@import "../../theme/helpers/colors";
+
+.InnerToolbar {
+    background: @venta-4;
+    padding: (@spacing / 3) (@spacing / 2) 0 (@spacing / 2);
+
+    &_Button {
+        &--active {
+            background: @venta-8;
+            color: @primary-color;
+        }
+    }
+
+    &_SubmenuRadio {
+        padding: @spacing * 0.3;
+        display: block;
+    }
+}

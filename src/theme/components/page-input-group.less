@@ -1,0 +1,28 @@
+@import "../helpers/colors";
+@import "../helpers/dimensions";
+
+.PageInputGroup {
+    width: 62px;
+    border-radius: @border-radius-xs;
+
+    .ant-input-group {
+        & .ant-input,
+        .ant-input-group-addon {
+            background-color: @venta-1;
+            border: none;
+        }
+
+        & .ant-input {
+            width: 31px;
+            text-align: right;
+            padding-right: 5px;
+        }
+
+        & .ant-input-group-addon {
+            color: @venta-6;
+            width: 31px;
+            text-align: left;
+            padding-left: 0;
+        }
+    }
+}

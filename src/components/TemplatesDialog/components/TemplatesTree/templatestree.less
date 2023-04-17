@@ -1,0 +1,83 @@
+@import "../../../../theme/helpers/colors";
+@import "../../../../theme/helpers/dimensions";
+
+.Templates_Tree {
+    .ant-tree-treenode {
+        width: 100%;
+
+        .ant-tree-node-content-wrapper {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+        }
+
+        .ant-tree-title {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+
+            .ant-dropdown-trigger {
+                width: 100%;
+            }
+
+            .Item_Container {
+                display: flex;
+                flex-direction: row;
+            }
+
+            label {
+                overflow-wrap: anywhere;
+                margin-right: @spacing;
+                white-space: nowrap;
+                .Empty_Item {
+                    font-size: 10px;
+                    color: @venta-4;
+                }
+            }
+            label:nth-child(2) {
+                white-space: nowrap;
+                max-width: 345px;
+                width: 100%;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            input {
+                width: auto;
+                padding: @spacing * 0.2 @spacing * 0.5;
+            }
+        }
+
+        .ant-tree-switcher {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    .Tree_Input {
+        margin-bottom: 0 !important;
+        background-color: @venta-3 !important;
+    }
+}
+
+.ListItemContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: @spacing * 0.3;
+
+    label {
+        max-width: 80%;
+        line-height: 1;
+        overflow-wrap: anywhere;
+    }
+    .ItemIcon {
+        margin-right: @spacing;
+    }
+    .List_Icon {
+        position: initial;
+        margin-left: auto;
+        margin-right: @spacing * 0.5;
+    }
+}

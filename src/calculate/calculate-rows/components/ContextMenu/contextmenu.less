@@ -1,0 +1,104 @@
+@import "../../../../theme/helpers/colors";
+@import "../../../../theme/helpers/dimensions";
+
+.Calculate_Rows_ContextMenu {
+    padding: @spacing * 0.5;
+    border-radius: @border-radius-sm * 0.5;
+    width: 400px;
+    font-size: 13px;
+
+    li {
+        padding-block: @spacing * 0.8;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        &:first-child {
+            border-top-left-radius: @border-radius-sm * 0.5;
+            border-top-right-radius: @border-radius-sm * 0.5;
+        }
+        &:last-child {
+            border-bottom-left-radius: @border-radius-sm * 0.5;
+            border-bottom-right-radius: @border-radius-sm * 0.5;
+        }
+
+        .ant-dropdown-menu-submenu-title {
+            width: 100%;
+        }
+    }
+
+    li.ant-dropdown-menu-item.ant-dropdown-menu-item-disabled.ant-dropdown-menu-item-danger {
+        color: rgba(black, 0.25);
+        background-color: @venta-0;
+    }
+
+    svg {
+        margin-right: @spacing;
+        width: 15px !important;
+        height: 15px !important;
+    }
+
+    .ant-divider-horizontal {
+        margin: 0;
+    }
+
+    svg {
+        font-size: 14px;
+        margin-right: @spacing;
+    }
+    .ant-dropdown-menu-item-divider {
+        padding-block: 0;
+    }
+}
+
+.Calculate_Modal {
+    width: 90vw !important;
+    max-width: 1400px;
+
+    .ant-table {
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+
+        &-container table > thead > tr:first-child th {
+            background-color: @venta-1;
+
+            &:first-child {
+                border-top-left-radius: 0px;
+            }
+
+            &:last-child {
+                border-top-right-radius: 0px;
+            }
+        }
+    }
+
+    p {
+        margin-block: @spacing * 1.5 !important;
+    }
+}
+
+.Right_Align {
+    text-align: right !important;
+    input {
+        text-align: right !important;
+    }
+}
+
+.Calculate_addTemplate {
+    padding: 4px 0 4px 0;
+    cursor: pointer;
+}
+
+.TemplateList {
+    height: 60vh;
+    overflow: auto;
+    li {
+        .Calculate_Submenu_Item_WrapName {
+            max-width: 330px;
+        }
+    }
+}
+.ant-dropdown-menu-submenu-popup ul {
+    border-radius: 12px;
+    padding: 5px;
+}

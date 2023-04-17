@@ -1,0 +1,61 @@
+@import "../../theme/helpers/dimensions";
+@import "../../theme/helpers/colors";
+
+.Status {
+    position: relative;
+    width: 18px;
+    height: 18px;
+    border-radius: 50px;
+    background-color: @venta-2;
+
+    &_Part {
+        position: absolute;
+        width: 8px;
+        height: 8px;
+
+        &_left-top {
+            left: 1px;
+            top: 1px;
+            border-top-left-radius: 50px;
+            background-color: @yellow-5;
+        }
+
+        &_right-top {
+            left: 9px;
+            top: 1px;
+            border-top-right-radius: 50px;
+            background-color: @blue-5;
+        }
+
+        &_left-bottom {
+            left: 1px;
+            top: 9px;
+            border-bottom-left-radius: 51px;
+            background-color: @venta-5;
+        }
+
+        &_right-bottom {
+            left: 9px;
+            top: 9px;
+            border-bottom-right-radius: 50px;
+            background-color: @green-5;
+        }
+    }
+}
+
+#Cross {
+    background: @venta-2;
+    height: 18px;
+    position: relative;
+    width: 0.5px;
+    left: 8.75px;
+}
+#Cross:after {
+    background: @venta-2;
+    content: "";
+    height: 0.5px;
+    left: -8.75px;
+    position: absolute;
+    top: 8.75px;
+    width: 18px;
+}

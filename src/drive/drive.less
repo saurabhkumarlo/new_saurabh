@@ -1,0 +1,22 @@
+.Drive {
+    display: grid;
+    grid-template-rows: 44px calc(100vh - 44px);
+    height: 100vh;
+
+    .Drive_Layout {
+        display: grid;
+        grid-template-rows: calc(100vh - 44px);
+        grid-template-columns: 50px calc(100vw - 50px);
+
+        .Drive_Wrapper {
+            display: grid;
+            grid-template-rows: 60px calc(100vh - 44px - 60px);
+
+            .Drive_Body {
+                position: relative;
+                background-color: #f0f2f4;
+                border-left: 1px solid rgba(0, 0, 0, 0.2);
+            }
+        }
+    }
+}

@@ -1,0 +1,50 @@
+@import "../../theme/helpers/colors";
+@import "../../theme/helpers/dimensions";
+
+.TermsOfService {
+    &_Card {
+        &_File_Container {
+            height: 390px;
+            background-color: @venta-1;
+            border-radius: 12px;
+        }
+
+        &_Article {
+            width: 100%;
+            overflow-wrap: anywhere;
+            height: 100%;
+            overflow-y: auto;
+            padding: @spacing * 0.5;
+        }
+
+        &_Button {
+            margin-top: @spacing * 3;
+            border-radius: @border-radius-xs;
+            border: none;
+            height: 30px;
+            color: @venta-0;
+            cursor: pointer;
+
+            &:focus,
+            &:hover {
+                background-color: darken(@primary-color, 10%);
+                outline: none;
+            }
+
+            &_Default {
+                margin-right: @spacing * 3;
+                color: @green-5;
+
+                &:hover {
+                    color: @venta-1;
+                }
+                box-shadow: none;
+            }
+
+            &_Wrapper {
+                display: flex;
+                justify-content: flex-end;
+            }
+        }
+    }
+}

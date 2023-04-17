@@ -1,0 +1,72 @@
+@import "../../../../theme/helpers/colors";
+@import "../../../../theme/helpers/dimensions";
+
+.Estimates_Tree {
+    .ant-tree-switcher {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .ant-tree-treenode {
+        width: 100%;
+
+        .ant-tree-node-content-wrapper {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+        }
+
+        .ant-tree-title {
+            label {
+                overflow-wrap: normal;
+            }
+        }
+    }
+}
+.Estimates_TreeColor .ant-tree-list .ant-tree-list-holder div .ant-tree-list-holder-inner .ant-tree-treenode-selected .ant-tree-node-content-wrapper {
+    background-color: #91f7c4 !important;
+    border-radius: 5px;
+    color: @venta-9 !important;
+}
+
+.Estimates_TreeColor .ant-tree-list .ant-tree-list-holder div .ant-tree-list-holder-inner .ant-tree-treenode-selected::before {
+    background-color: #fff !important;
+    color: @venta-9 !important;
+}
+.Estimates_TreeColor .ant-tree-list .ant-tree-list-holder div .ant-tree-list-holder-inner .ant-tree-treenode-selected.ant-tree-title div .Tree_Status {
+    padding: 1px;
+    .status {
+        width: 16px;
+        height: 16px;
+        .Status_Part_left-bottom {
+            width: 8px;
+            height: 7px;
+        }
+    }
+}
+
+.ListItemContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: @spacing * 0.3;
+
+    label {
+        max-width: 80%;
+        line-height: 1;
+        overflow-wrap: anywhere;
+    }
+    .ItemIcon {
+        margin-right: @spacing;
+    }
+    .List_Icon {
+        position: initial;
+        margin-left: auto;
+        margin-right: @spacing * 0.5;
+    }
+}
+
+.TreeItem_Label {
+    display: block;
+    margin-right: 23px;
+}

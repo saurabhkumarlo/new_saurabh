@@ -1,0 +1,45 @@
+@import "../../../theme/helpers/colors.less";
+@import "../../../theme/helpers/dimensions.less";
+
+.DriveProperties {
+    .ant-input {
+        border: none;
+        border-radius: @border-radius-xs;
+        background-color: white;
+    }
+    .ant-input-group-addon {
+        border: none;
+        border-radius: 0px @border-radius-xs @border-radius-xs 0px;
+        background-color: @venta-3;
+    }
+
+    .DescriptionPane {
+        .ant-input {
+            border-radius: @border-radius-xs 0px 0px @border-radius-xs;
+        }
+    }
+    .fa-rotate-right-90 {
+        transform: rotate(-90deg);
+    }
+}
+
+.IFC-error {
+    display: flex;
+    align-items: center;
+    margin: 0.5 * @spacing;
+    padding: @spacing;
+    border: 2px solid red;
+    border-radius: @border-radius-xs;
+    color: red;
+    background-color: @red-2;
+    font-weight: bold;
+
+    .error-icon {
+        width: 20px;
+        height: auto;
+    }
+
+    label {
+        margin-left: @spacing;
+    }
+}

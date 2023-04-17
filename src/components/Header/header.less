@@ -1,0 +1,123 @@
+@import "../../theme/helpers/colors";
+@import "../../theme/helpers/dimensions";
+
+.Header {
+    background: @venta-0;
+    padding: @spacing * 0.5 @spacing * 1.5;
+    align-items: center;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    border-bottom: 1px solid @venta-4;
+    height: 44px;
+
+    &_Logo {
+        width: 20px;
+        height: 20px;
+        margin-right: @spacing * 2;
+    }
+
+    &_Wrapper--left {
+        display: flex;
+        align-items: center;
+    }
+
+    &_Title {
+        text-align: center;
+        display: flex;
+
+        div {
+            max-width: fit-content;
+            width: 100%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        .ant-select-arrow {
+            top: 45%;
+            right: 0;
+        }
+    }
+
+    &_Buttons_Wrapper {
+        text-align: right;
+    }
+
+    &_Dialog {
+        display: none;
+    }
+
+    &_DocumentSwitch {
+        width: fit-content;
+
+        > .ant-select-selector {
+            background-color: transparent !important;
+        }
+    }
+
+    &_Button {
+        &--active {
+            background-color: @venta-2 !important;
+            border-radius: @border-radius-xs;
+        }
+    }
+
+    .ant-btn {
+        border: none;
+        box-shadow: none;
+        margin: 0 @spacing * 0.5;
+        padding: @spacing * 0.5;
+
+        &:disabled,
+        &:disabled:hover {
+            color: lighten(@venta-9, 50%);
+            background-color: transparent;
+        }
+
+        &:hover {
+            color: @venta-9;
+            background-color: @venta-2 !important;
+            border-radius: @border-radius-xs;
+        }
+        &:focus {
+            color: @venta-9;
+            border-radius: @border-radius-xs;
+        }
+    }
+    .activeProjectString {
+        max-width: 600px;
+    }
+
+    &_Quick_Switch {
+        button {
+            margin: 0;
+        }
+    }
+
+    input {
+        background-color: @venta-1;
+        border: none;
+        height: 20px;
+    }
+
+    .ant-select-dropdown.ant-select-dropdown-placement-bottomLeft {
+        min-width: fit-content !important;
+    }
+}
+
+.ant-input-affix-wrapper {
+    border: none;
+    background-color: @venta-1;
+    border-radius: @border-radius-xs;
+}
+
+.ant-input-prefix {
+    color: @venta-6;
+}
+
+.Feedback_Iframe {
+    width: 100%;
+    border-bottom-left-radius: @border-radius-xs;
+    border-bottom-right-radius: @border-radius-xs;
+    border: none;
+}

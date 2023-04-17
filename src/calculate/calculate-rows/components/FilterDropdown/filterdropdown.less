@@ -1,0 +1,50 @@
+@import "../../../../theme/helpers/colors";
+@import "../../../../theme/helpers/dimensions";
+
+.ant-dropdown {
+    z-index: 1059 !important;
+}
+
+.ant-table-filter-dropdown {
+    width: 200px;
+    height: 260px;
+    border-radius: @border-radius-sm * 0.5;
+    padding: @spacing;
+
+    .Filter_Dropdown_Rows {
+        input {
+            border-radius: @border-radius-xs;
+        }
+        .ant-divider-horizontal {
+            margin-block: @spacing;
+            border-color: @venta-4;
+        }
+        .ant-checkbox-group {
+            display: flex;
+            flex-direction: column;
+            height: 144px;
+            margin-inline: @spacing * 0.5;
+            overflow-y: auto;
+
+            .ant-checkbox-wrapper {
+                font-size: 13px;
+                padding-block: @spacing * 0.5;
+            }
+        }
+        .Action_Section {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            button {
+                border-radius: @border-radius-xs;
+                padding-inline: @spacing * 1.5;
+                font-size: 13px;
+            }
+
+            .ant-btn-text {
+                color: @green-5;
+            }
+        }
+    }
+}

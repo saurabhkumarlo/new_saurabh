@@ -1,0 +1,127 @@
+@import "../../theme/helpers/colors";
+@import "../../theme/helpers/dimensions";
+
+.Modal_Container_Top {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 45px !important;
+}
+
+.QuickSwitch_Title_Lock_Icon {
+    height: 12px;
+    width: 12px;
+    margin-right: 7px;
+}
+
+.Modal_Container {
+    .Modal_Title {
+        padding-right: 2 * @spacing;
+
+        &_Filter {
+            width: 200px;
+        }
+    }
+    .Template_Container {
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+        margin-block: @spacing;
+
+        .Action_Button {
+            padding: 0;
+            color: @venta-9;
+            display: flex;
+            align-items: center;
+
+            svg {
+                font-size: 14px;
+                color: @venta-9;
+            }
+            span {
+                margin-inline: @spacing;
+            }
+        }
+
+        .Template_Section {
+            width: 800px / 3;
+            padding: 5px;
+            overflow: auto;
+
+            .ant-btn-loading-icon {
+                margin-inline: 0;
+                display: flex;
+                align-items: center;
+
+                .anticon-loading {
+                    margin-inline: 0;
+                    padding-right: 0;
+                }
+            }
+            input {
+                margin: 0;
+            }
+            .ant-radio-group {
+                display: flex;
+                flex-direction: column;
+                margin-top: @spacing * 0.5;
+                margin-left: @spacing * 0.5;
+                .ant-radio-wrapper {
+                    padding-block: @spacing * 0.3;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    width: 100%;
+
+                    .ant-spin-dot {
+                        height: auto;
+                        width: auto;
+                        font-size: inherit;
+                        margin-right: @spacing;
+                    }
+
+                    span {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+
+                        button,
+                        div {
+                            position: absolute;
+                            right: 0;
+
+                            svg {
+                                font-size: 14px;
+                                color: @venta-9;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .Divider_Section {
+            padding-top: @spacing;
+            .ant-divider-vertical {
+                border-color: @venta-4;
+                margin-inline: @spacing !important;
+                height: 100%;
+            }
+        }
+
+        .Folder_Section {
+            width: 800px * 2 / 3 - 32px;
+
+            .ant-btn-loading-icon {
+                margin-inline: 0;
+                display: flex;
+                align-items: center;
+
+                .anticon-loading {
+                    margin-inline: 0;
+                    padding-right: 0;
+                }
+            }
+        }
+    }
+}

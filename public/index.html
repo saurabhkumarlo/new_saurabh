@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" class="notranslate" translate="no">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" href="%PUBLIC_URL%/logo.png" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#000000" />
+        <meta name="description" content="Geometra 4" />
+        <meta name="google" content="notranslate" />
+        <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+        <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+        <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+        <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+        <title>Geometra 4</title>
+
+        <!--Start of Tawk.to Script-->
+        <script type="text/javascript">
+            function _setupTawk() {
+                if (window.Tawk_API !== undefined && typeof window.Tawk_API.hideWidget === "function") {
+                    window.Tawk_API.hideWidget();
+                }
+                /**
+                 * Delete script tags of tawk
+                 */
+                const scripts = document.getElementsByTagName("script");
+                for (let i = 0; i < scripts.length; i++) {
+                    const tag = scripts[i];
+                    if (tag.getAttribute("tawk") === "yes") {
+                        tag.parentNode.removeChild(tag);
+                    }
+                }
+                /**
+                 * Delete anything related to tawk, otherwise new widget would not be loaded
+                 */
+                for (const name in window) {
+                    if (window.hasOwnProperty(name) && (name.includes("tawk") || name.includes("Tawk"))) {
+                        delete window[name];
+                    }
+                }
+
+                /**
+                 * Almost the same code as original
+                 */
+                window.Tawk_API = {};
+                window.Tawk_LoadStart = new Date();
+
+                Tawk_API.onLoad = function () {
+                    var localState = localStorage.getItem("showSupportWidget") === "false" ? false : true;
+                    if (!localState) Tawk_API.hideWidget();
+                };
+                (function () {
+                    const chatDivbyId = document.getElementById("chat-bubble");
+                    if (chatDivbyId) chatDivbyId?.parentElement.remove();
+
+                    let storedLocalization = localStorage.getItem("language");
+                    (s1 = document.createElement("script")), (s0 = document.getElementsByTagName("script")[0]);
+                    s1.async = true;
+                    if (storedLocalization === "sv") s1.src = "https://embed.tawk.to/5f5b246c4704467e89ee0806/1fg6a6s3j";
+                    else if (storedLocalization === "no") s1.src = "https://embed.tawk.to/5f5b246c4704467e89ee0806/1fg6c0gap";
+                    else s1.src = "https://embed.tawk.to/5f5b246c4704467e89ee0806/default"; //Here we use correct url for locale
+                    s1.charset = "UTF-8";
+                    s1.setAttribute("crossorigin", "*");
+                    s1.setAttribute("tawk", "yes"); //This line is used to mark tawk script
+                    s0.parentNode.insertBefore(s1, s0);
+                })();
+            }
+            _setupTawk();
+        </script>
+        <!--End of Tawk.to Script-->
+
+        <!--Start of BIMer Viewer-->
+        <script src="/bimer/BimerIfcViewer-lib-c7c1432ea9997ce35861.bundle.js"></script>
+        <script src="/bimer/BimerIfcViewer-ui-42ff5fb37d5f15638919.bundle.js"></script>
+        <script src="/bimer/BimerIfcViewer-measures-42c1624ce6b890b1d6c8.bundle.js"></script>
+        <script defer="" src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+        <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.light_blue-blue.min.css" />
+        <!--End of BIMer Viewer-->
+    </head>
+
+    <body>
+        <noscript>You need to enable JavaScript to run this app.</noscript>
+        <div id="root"></div>
+        <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    --></body>
+</html>

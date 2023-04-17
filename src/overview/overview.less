@@ -1,0 +1,41 @@
+@import "../theme/helpers/colors";
+@import "../theme/helpers/dimensions";
+
+.Overview {
+    display: grid;
+    grid-template-rows: "44px 1fr";
+    height: 100vh;
+    background-color: @venta-2;
+
+    &_Layout {
+        display: grid;
+        grid-template-rows: calc(100vh - 44px);
+        grid-template-columns: 50px calc(100vw - 50px);
+    }
+
+    &_Wrapper {
+        width: 800px;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: @spacing * 2;
+    }
+
+    &_Card {
+        background-color: @venta-0;
+        border-radius: @border-radius-sm;
+        border: none;
+
+        &_Title {
+            margin-bottom: @spacing * 2;
+        }
+    }
+}
+
+.ant-card-body {
+    padding: @spacing * 2;
+}
+
+.ant-row {
+    margin-bottom: 0px !important;
+}

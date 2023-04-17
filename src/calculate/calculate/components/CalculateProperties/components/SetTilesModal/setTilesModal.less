@@ -1,0 +1,22 @@
+@import "../../../../../../theme/helpers/colors.less";
+@import "../../../../../../theme/helpers/dimensions.less";
+
+.Tiles_Modal {
+    .ant-modal-content {
+        width: 80%;
+        margin: auto;
+
+        & .ant-col-24 {
+            margin-bottom: @spacing;
+        }
+
+        & .ant-divider {
+            border-left: @spacing*0.1 solid @venta-4;
+        }
+
+        input {
+            border: none;
+            border-radius: @border-radius-xs;
+        }
+    }
+}

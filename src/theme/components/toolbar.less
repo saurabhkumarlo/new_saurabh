@@ -1,0 +1,87 @@
+@import "../helpers/colors";
+@import "../helpers/dimensions";
+
+.Toolbar {
+    background: @venta-0;
+    display: flex;
+    height: 60px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-bottom: solid 1px @venta-4;
+    padding: 0 (@spacing * 2);
+
+    &_Button {
+        &--active {
+            background-color: @venta-2 !important;
+            border-radius: @border-radius-xs;
+        }
+    }
+
+    .ant-btn {
+        border: none;
+        box-shadow: none;
+        margin: 0 @spacing * 0.5;
+        padding: @spacing * 0.5;
+
+        &:disabled,
+        &:disabled:hover {
+            color: lighten(@venta-9, 50%);
+            background-color: transparent;
+        }
+
+        &:hover {
+            color: @venta-9;
+            background-color: @venta-2 !important;
+            border-radius: @border-radius-xs;
+        }
+        &:focus {
+            color: @venta-9;
+            border-radius: @border-radius-xs;
+        }
+    }
+
+    &_Inactive_Button_Wrapper {
+        display: inline-grid;
+        padding: @spacing * 0.3 0;
+
+        button[disabled] {
+            pointer-events: none;
+        }
+    }
+
+    &_Button {
+        &_Sizing {
+            &--small {
+                display: flex !important;
+                justify-content: center;
+                align-items: center;
+
+                > * {
+                    font-size: 10px !important;
+                    margin-top: @spacing * 0.5;
+                }
+            }
+
+            &--big {
+                > * {
+                    font-size: 16px !important;
+                }
+            }
+        }
+    }
+
+    &_Overlay {
+        position: absolute;
+        background-color: @venta-0;
+        width: 166px;
+        height: 30px;
+        border-radius: 0 @border-radius-xs @border-radius-xs @border-radius-xs;
+        box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+        padding: @spacing;
+
+        & .ant-slider {
+            margin: 0;
+        }
+    }
+}

@@ -1,0 +1,104 @@
+{
+    "name": "geometra-antd",
+    "version": "4.0.0",
+    "private": true,
+    "engines": {
+        "node": "12"
+    },
+    "dependencies": {
+        "@ant-design/icons": "^4.3.0",
+        "@craco/craco": "^5.9.0",
+        "@fortawesome/fontawesome-pro": "^5.15.2",
+        "@fortawesome/fontawesome-svg-core": "^1.2.34",
+        "@fortawesome/free-regular-svg-icons": "^5.15.3",
+        "@fortawesome/free-solid-svg-icons": "^5.15.2",
+        "@fortawesome/pro-light-svg-icons": "^5.15.2",
+        "@fortawesome/react-fontawesome": "^0.1.14",
+        "@pdftron/webviewer": "^8.3.3",
+        "@testing-library/jest-dom": "^4.2.4",
+        "@testing-library/react": "^9.5.0",
+        "@testing-library/user-event": "^7.2.1",
+        "@types/jest": "^27.0.2",
+        "@types/lodash": "^4.14.178",
+        "@types/node": "^16.11.1",
+        "@types/react": "^17.0.30",
+        "@types/react-dom": "^17.0.9",
+        "@types/react-router-dom": "^5.3.1",
+        "antd": "^4.16.6",
+        "axios": "^0.21.1",
+        "bytes": "^3.1.0",
+        "classnames": "^2.3.1",
+        "craco-less": "^1.17.1",
+        "flag-icon-css": "^4.1.6",
+        "i18next": "^19.9.1",
+        "i18next-locize-backend": "^4.1.9",
+        "immutable": "^4.0.0-rc.12",
+        "json2csv": "^3.7.3",
+        "jwt-simple": "^0.5.6",
+        "marked": "^2.1.3",
+        "mathjs": "^8.1.1",
+        "md5": "^2.3.0",
+        "moment": "^2.29.1",
+        "mousetrap": "^1.6.5",
+        "numeral": "^2.0.6",
+        "react": "^16.14.0",
+        "react-clipboard.js": "^1.1.4",
+        "react-color": "^2.18.1",
+        "react-dom": "^16.14.0",
+        "react-error-boundary": "^3.1.3",
+        "react-i18next": "^11.8.8",
+        "react-markdown": "^8.0.0",
+        "react-router": "^5.2.0",
+        "react-router-dom": "^5.2.0",
+        "react-scripts": "3.4.3",
+        "react-split-pane": "^0.1.92",
+        "react-virtualized": "^9.22.3",
+        "reflux": "^6.4.1",
+        "socket.io-client": "^4.3.2",
+        "typescript": "^3.9.10",
+        "wcag-contrast": "^3.0.0"
+    },
+    "scripts": {
+        "copy-static-webviewer": "xcopy node_modules\\@pdftron\\webviewer\\public public\\webviewer\\ /E /Y",
+        "start": "craco start",
+        "build": "craco build",
+        "test": "craco test",
+        "eject": "react-scripts eject",
+        "cypress:open": "node_modules/.bin/cypress open",
+        "e2e:test": "npm run delete:reports; npm run delete:downloads; node cypress/support/e2eRunner.js",
+        "delete:reports": "rm -rf cypress/results/report",
+        "delete:downloads": "rm -rf cypress/downloads",
+        "postinstall": "node tools/copy-webviewer-files.js"
+    },
+    "eslintConfig": {
+        "extends": "react-app"
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    },
+    "devDependencies": {
+        "@welldone-software/why-did-you-render": "^6.2.3",
+        "cypress": "^8.2.0",
+        "cypress-cucumber-preprocessor": "^4.1.0",
+        "eslint-plugin-cypress": "^2.11.3",
+        "multiple-cucumber-html-reporter": "^1.18.0"
+    },
+    "cypress-cucumber-preprocessor": {
+        "nonGlobalStepBaseDir": "cypress/support/step_definitions/",
+        "nonGlobalStepDefinitions": false,
+        "cucumberJson": {
+            "generate": true,
+            "outputFolder": "cypress/results/report/json",
+            "filePrefix": ""
+        }
+    }
+}

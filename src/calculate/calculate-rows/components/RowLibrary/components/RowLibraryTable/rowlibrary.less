@@ -1,0 +1,46 @@
+@import "../../../../../../theme/helpers/colors.less";
+@import "../../../../../../theme/helpers/dimensions";
+
+.Library_Container {
+    height: 100%;
+    background-color: @venta-1;
+    padding: @spacing * 1.5;
+    overflow-y: auto;
+
+    .ant-divider-horizontal {
+        width: 30px;
+        min-width: unset;
+        border-color: @green-5;
+        margin: 0;
+        margin-bottom: @spacing * 0.5;
+    }
+
+    .Library_Table {
+        margin-right: 3px;
+        .ant-table-selection-column {
+            width: auto;
+            min-width: unset;
+        }
+        .ant-select-focused {
+            background-color: @venta-3 !important;
+            border-radius: @border-radius-xs;
+        }
+        .ant-table-filter-column-title {
+            flex: inherit;
+            padding-right: 0px !important;
+        }
+        .ant-table-filter-trigger-container {
+            position: inherit !important;
+            margin-left: auto !important;
+            margin-right: @spacing * 0.5;
+        }
+
+        .ant-table-thead > tr > th {
+            background-color: @venta-2!important;
+        }
+
+        .ant-table-tbody {
+            background-color: @venta-0;
+        }
+    }
+}

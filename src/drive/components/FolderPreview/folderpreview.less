@@ -1,0 +1,116 @@
+@import "../../../theme/helpers/colors.less";
+@import "../../../theme/helpers/dimensions.less";
+
+.Drive_Folder_Preview {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: @venta-3;
+    overflow-y: auto;
+
+    .List_Container {
+        padding: @spacing * 1.6;
+
+        .Card_Preview {
+            border-radius: @border-radius-sm * 0.5;
+            width: 128px;
+            height: 128px;
+
+            .ant-card-head {
+                border: none;
+                min-height: fit-content;
+
+                .ant-card-extra {
+                    width: 100%;
+                    padding-bottom: 0;
+                    .Card_Header {
+                        min-height: 18px;
+                        width: 100%;
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        justify-content: flex-end;
+
+                        svg {
+                            font-size: 14px;
+                        }
+                        &_Loader {
+                            height: 2 * @spacing;
+                        }
+                    }
+                }
+            }
+            .ant-card-body {
+                padding: 0;
+                height: calc(100% - 26.5px);
+
+                .Card_Body_Wrapper {
+                    cursor: pointer;
+                    width: 100%;
+                    height: 100%;
+
+                    .File_Icon {
+                        font-size: 40px;
+                        text-align: center;
+                    }
+
+                    .Card_Footer {
+                        height: calc(101.5px - 66.66px);
+                        background-color: @venta-1;
+                        border-bottom-left-radius: @border-radius-sm * 0.5;
+                        border-bottom-right-radius: @border-radius-sm * 0.5;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+
+                        .File_Title {
+                            margin-top: auto;
+                            margin-bottom: auto;
+                            text-align: center;
+                            padding-inline: @spacing * 0.5;
+                            max-width: 100%;
+                        }
+                    }
+
+                    .Spinner {
+                        animation: spin 2s linear infinite;
+                        color: @venta-6;
+                        @keyframes spin {
+                            100% {
+                                transform: rotate(360deg);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.ContextMenu_SubMenu {
+    ul {
+        border-radius: @border-radius-sm * 0.5;
+        padding: @spacing * 0.5px;
+        li {
+            &:first-child {
+                border-top-left-radius: @border-radius-sm * 0.5;
+                border-top-right-radius: @border-radius-sm * 0.5;
+                div {
+                    border-radius: inherit;
+                }
+            }
+            &:last-child {
+                border-bottom-left-radius: @border-radius-sm * 0.5;
+                border-bottom-right-radius: @border-radius-sm * 0.5;
+                div {
+                    border-radius: inherit;
+                }
+            }
+        }
+    }
+}
+
+.Progress_Wrapper.ant-progress {
+    padding: 0.5 * @spacing 1.5 * @spacing 0 1.5 * @spacing;
+    background-color: @venta-3;
+}

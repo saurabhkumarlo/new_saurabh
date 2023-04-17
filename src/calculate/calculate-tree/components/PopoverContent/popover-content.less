@@ -1,0 +1,67 @@
+@import "../../../../theme/helpers/dimensions";
+@import "../../../../theme/helpers/colors";
+
+.Content {
+    padding: @spacing 0;
+}
+
+.Title {
+    max-width: 160px;
+    margin-left: @spacing;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.Title_Wrapper {
+    margin-left: @spacing * 2;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.Exclamation_Circle_Icon {
+    color: @red-5;
+    margin-left: @spacing;
+}
+
+.Line {
+    width: 2px;
+    height: 50px;
+    background-color: @venta-2;
+}
+
+.Inactive {
+    opacity: 0.5;
+}
+
+.Status_Icon {
+    display: flex;
+    justify-content: center;
+}
+
+.Icons {
+    &_Container {
+        display: flex;
+        flex-direction: row;
+        padding-top: @spacing;
+    }
+
+    &_Wrapper {
+        display: flex;
+        flex-direction: column;
+        padding: 0 (@spacing * 2) @spacing (@spacing * 2);
+        align-items: center;
+
+        .ant-btn.ant-btn-icon-only {
+            border: none;
+            box-shadow: none;
+            width: 24px;
+            height: 24px;
+        }
+    }
+}
+
+.Green_Icon {
+    color: @green-5;
+}

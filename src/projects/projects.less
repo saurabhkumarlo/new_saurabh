@@ -1,0 +1,173 @@
+@import "../theme/helpers/colors";
+@import "../theme/helpers/dimensions";
+
+.Projects {
+    display: grid;
+    grid-template-rows: 44px 1fr;
+    height: 100vh;
+    background-color: @venta-2;
+
+    &_Layout {
+        display: grid;
+        grid-template-rows: 60px calc(100vh - 84px);
+        grid-template-columns: 50px calc(100vw - 50px);
+        height: 100%;
+
+        &_Sidebar {
+            grid-row: 1/2;
+            height: 100vh;
+        }
+    }
+
+    &_ProgressWrapper {
+        grid-column-start: 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &_Table {
+        grid-column-start: 2;
+        height: calc(100vh - 84px);
+        padding: @spacing * 2;
+        overflow: auto;
+
+        &_Icon {
+            &--projectLead {
+                margin-left: -@spacing;
+            }
+
+            &--department {
+                margin-left: -@spacing * 2;
+            }
+        }
+
+        .ant-table-column-title {
+            flex: none;
+        }
+        .ant-table-column-sorters {
+            justify-content: normal;
+        }
+    }
+
+    &_Modal {
+        .ant-form-item {
+            padding-top: @spacing * 2;
+        }
+
+        .ant-btn.ant-btn-icon-only {
+            background-color: @venta-1;
+            border: none;
+            box-shadow: none;
+            width: 20px;
+            height: 20px;
+        }
+
+        .ant-modal-content {
+            border-radius: @border-radius-sm;
+        }
+
+        .ant-modal-header {
+            border-radius: @border-radius-sm;
+            border-top: none;
+            border-bottom-left-radius: 0px;
+            border-bottom-right-radius: 0px;
+            border-bottom-color: @venta-4;
+            border-width: 1px;
+            margin: 0px @spacing * 3;
+            padding: @spacing * 3 0 @spacing * 0.5 0;
+        }
+
+        .ant-modal-body {
+            padding: 0 @spacing * 3 @spacing * 3 @spacing * 3;
+        }
+
+        .ant-modal-footer {
+            border: none;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 0 @spacing * 3 @spacing * 3 @spacing * 3;
+
+            .ant-btn {
+                border: none;
+                box-shadow: none;
+                border-radius: @border-radius-xs;
+                padding: 0 @spacing * 2;
+            }
+        }
+    }
+}
+
+.ant-table {
+    border-top-left-radius: @border-radius-sm;
+    border-top-right-radius: @border-radius-sm;
+
+    &-container table > thead > tr:first-child th {
+        background-color: @venta-1;
+
+        &:first-child {
+            border-top-left-radius: @border-radius-sm;
+        }
+
+        &:last-child {
+            border-top-right-radius: @border-radius-sm;
+        }
+    }
+
+    &-column-sorter {
+        margin-left: @spacing * 0.5;
+
+        &-inner {
+            margin-bottom: 1px;
+        }
+
+        &-up,
+        &-down {
+            &.active svg {
+                fill: @green-5;
+                stroke: @green-5;
+                stroke-width: 90px;
+            }
+
+            svg {
+                fill: transparent;
+                stroke-width: 90px;
+                stroke: @venta-9;
+                font-size: 9px;
+            }
+        }
+    }
+
+    &-filter-trigger {
+        color: @venta-9;
+
+        &-container {
+            left: 98px;
+            right: unset;
+            align-items: center;
+            text-align: center;
+        }
+    }
+}
+
+td.ant-table-column-sort {
+    background: none;
+}
+
+.ant-table-filter-trigger-container-open,
+.ant-table-filter-trigger-container:hover,
+.ant-table-thead th.ant-table-column-has-sorters:hover .ant-table-filter-trigger-container:hover,
+.ant-table-thead th.ant-table-column-has-sorters:hover .ant-table-filter-trigger-container {
+    background: none;
+}
+
+.ant-table-filter-dropdown {
+    height: auto;
+}
+.ant-table-filter-dropdown-btns {
+    padding-bottom: 0;
+}
+.ant-form-item-label > label {
+    flex-direction: row-reverse;
+}

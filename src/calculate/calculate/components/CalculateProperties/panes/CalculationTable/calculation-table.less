@@ -1,0 +1,55 @@
+@import "/src/theme/helpers/colors.less";
+@import "/src/theme/helpers/dimensions.less";
+
+.Calculation_Table_Wrapper {
+    padding-bottom: 20px;
+
+    .ant-table {
+        &-thead {
+            display: none;
+        }
+        &-tbody {
+            background-color: @venta-2;
+        }
+        .ant-table-row {
+            .ant-table-cell {
+                border-bottom: 1px solid @venta-4;
+                padding: 5px 8px;
+            }
+        }
+        &-row:hover {
+            .ant-table-cell {
+                background-color: @venta-2;
+            }
+        }
+    }
+
+    .Data_Table_Value_Editable {
+        font-size: 12px;
+        text-decoration: underline;
+        cursor: pointer;
+
+        &_With_Formula {
+            font-size: 12px;
+            font-weight: bold;
+            text-decoration: underline;
+            color: @green-7;
+            cursor: pointer;
+        }
+    }
+    .rowList {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid @venta-4;
+        padding: 5px 8px;
+
+        div {
+            display: flex;
+        }
+        label {
+            display: block;
+            min-width: 50px;
+            margin-right: @spacing;
+        }
+    }
+}

@@ -1,0 +1,37 @@
+@import "../../../theme/helpers/colors.less";
+@import "../../../theme/helpers/dimensions.less";
+
+.Drive_Toolbar {
+    display: flex;
+    justify-content: center;
+    background: #ffffff;
+    height: 60px;
+    flex-direction: row;
+    align-items: center;
+    border-bottom: solid 1px #c6cacd;
+    padding: 0 20px;
+
+    .Page_Input {
+        width: 60px;
+        height: 30px;
+        background-color: @venta-1;
+        border-radius: @border-radius-xs;
+        border: none;
+    }
+
+    .ant-divider-vertical {
+        margin: 0;
+        height: 28px;
+    }
+
+    .Drive_MoreMenu {
+        position: fixed;
+        right: 20px;
+    }
+
+    .Bimer_Divider {
+        width: 2px;
+        height: 30px;
+        background: @venta-1;
+    }
+}

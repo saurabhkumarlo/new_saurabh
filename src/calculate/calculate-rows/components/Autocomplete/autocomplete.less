@@ -1,0 +1,31 @@
+@import "../../../../theme/helpers/dimensions";
+
+.Calculate_Rows_Dropdown {
+    border-radius: @border-radius-xs * 2 !important;
+    padding: @border-radius-xs!important;
+    width: fit-content !important;
+    max-width: 120px !important;
+
+    .rc-virtual-list-holder-inner {
+        div {
+            &:first-child {
+                border-top-left-radius: @border-radius-xs * 2 !important;
+                border-top-right-radius: @border-radius-xs * 2 !important;
+            }
+            &:last-child {
+                border-bottom-left-radius: @border-radius-xs * 2 !important;
+                border-bottom-right-radius: @border-radius-xs * 2 !important;
+            }
+        }
+    }
+}
+
+.AmountPopover {
+    max-width: 250px;
+    .ant-popover-inner {
+        padding: 5px;
+    }
+}
+.Calculate_Rows_Input {
+    max-width: fit-content;
+}

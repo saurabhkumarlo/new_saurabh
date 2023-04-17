@@ -1,0 +1,14 @@
+{
+    "baseUrl": "https://dev.geometra.rukkor.io",
+    "viewportWidth": 1920,
+    "viewportHeight": 1080,
+    "pageLoadTimeout": 120000,
+    "responseTimeout": 10000,
+    "defaultCommandTimeout": 10000,
+    "trashAssetsBeforeRuns": true,
+    "video": false,
+    "env": {
+        "baseUrl": "https://dev.geometra.rukkor.io",
+        "TAGS": "not @ignore"
+    }
+}

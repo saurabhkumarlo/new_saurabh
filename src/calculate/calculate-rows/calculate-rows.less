@@ -1,0 +1,144 @@
+@import "../../theme/helpers/colors";
+@import "../../theme/helpers/dimensions";
+
+.Calculate_Rows_Container {
+    background-color: @venta-0;
+    border-radius: 0px !important;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .Dropdown_Container {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        overflow-y: auto;
+    }
+
+    .Calculate_Rows {
+        &_Button_Icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &--active {
+                background-color: @venta-2 !important;
+                border-radius: @border-radius-xs;
+            }
+        }
+
+        &_Insert_Button {
+            border-radius: @border-radius-xs;
+            padding: @spacing * 0.5 @spacing * 2.5;
+            margin-right: @spacing;
+        }
+
+        &_Add_Wrapper {
+            padding: @spacing * 0.5 0;
+            margin: 0px !important;
+            margin-top: auto !important;
+            background-color: @venta-0;
+
+            input {
+                border-radius: @border-radius-xs!important;
+            }
+        }
+        &_Currency {
+            text-align: right;
+            background-color: @venta-0;
+        }
+        &_Add_Row {
+            input {
+                background-color: @venta-1;
+            }
+        }
+        &_Table {
+            margin-right: @spacing * 0.3;
+
+            .ant-table-selection-column {
+                width: 40px;
+                min-width: 40px;
+                max-width: 40px;
+            }
+            .ant-select-focused {
+                background-color: @venta-3!important;
+                border-radius: @border-radius-xs;
+            }
+
+            .ant-table-filter-column-title {
+                flex: inherit;
+                padding-right: 0px !important;
+            }
+            .ant-table-filter-trigger-container {
+                position: inherit !important;
+                margin-left: auto !important;
+                margin-right: @spacing * 0.5;
+            }
+        }
+    }
+
+    .ant-col {
+        align-self: center;
+    }
+
+    .ant-btn-icon-only {
+        border: none;
+        box-shadow: none;
+        margin: 0 @spacing * 0.5;
+        padding: @spacing * 0.5;
+        border-radius: @border-radius-xs;
+
+        &:focus {
+            background-color: transparent;
+        }
+
+        &:hover {
+            background-color: @venta-2 !important;
+        }
+    }
+
+    input {
+        border-radius: @border-radius-xs!important;
+    }
+    input:read-only {
+        background-color: inherit;
+    }
+
+    .ant-table {
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+
+        &-container table > thead > tr:first-child th {
+            background-color: @venta-1;
+
+            &:first-child {
+                border-top-left-radius: 0px;
+            }
+
+            &:last-child {
+                border-top-right-radius: 0px;
+            }
+        }
+    }
+
+    input:disabled .ant-input-group-addon {
+        color: rgba(0, 0, 0, 0.25) !important;
+    }
+
+    .ant-input-group-addon {
+        background-color: rgba(255, 255, 255, 0);
+        border-color: rgba(255, 255, 255, 0);
+        padding: 0px;
+    }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+    input[type="number"] {
+        -moz-appearance: textfield;
+    }
+    .ant-table-tbody > tr.ant-table-row-selected > td {
+        background: @venta-3;
+    }
+}

@@ -1,0 +1,146 @@
+@import "../../theme/helpers/colors";
+@import "../../theme/helpers/dimensions";
+
+.Modal_Container_Top {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 45px !important;
+    width: 800px !important;
+    height: 500px;
+}
+
+.Modal_Container {
+    min-width: 800px !important;
+    .Modal_Title {
+        padding-right: 2 * @spacing;
+
+        &_Filter {
+            width: 200px;
+        }
+    }
+    .Template_Container {
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+        margin-block: @spacing;
+        height: 432px;
+
+        .Action_Button {
+            padding: 0;
+            color: @venta-9;
+            display: flex;
+            align-items: center;
+
+            svg {
+                font-size: 14px;
+                color: @venta-9;
+            }
+            span {
+                margin-inline: @spacing;
+            }
+        }
+
+        .Template_Section {
+            width: 800px / 3;
+
+            .Template_Estimate_Name {
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+                position: inherit !important;
+                max-width: 145px;
+                padding-top: 3px;
+                padding-left: 5px;
+            }
+
+            .ant-btn-loading-icon {
+                margin-inline: 0;
+                display: flex;
+                align-items: center;
+
+                .anticon-loading {
+                    margin-inline: 0;
+                    padding-right: 0;
+                }
+            }
+            input {
+                margin: 0;
+            }
+            .ant-radio-group {
+                display: flex;
+                flex-direction: column;
+                margin-top: @spacing * 0.5;
+                align-items: center;
+
+                .ant-radio-wrapper {
+                    padding-block: @spacing * 0.3;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: baseline !important;
+                    width: 100%;
+                    span {
+                        align-items: flex-start !important;
+                        flex-direction: column !important;
+                        span {
+                            padding-top: 2px;
+                            margin-left: 2px;
+                        }
+                    }
+                    .ant-spin-dot {
+                        height: auto;
+                        width: auto;
+                        font-size: inherit;
+                        margin-right: @spacing;
+                    }
+
+                    span {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+
+                        button,
+                        div {
+                            position: absolute;
+                            right: 0;
+
+                            svg {
+                                font-size: 14px;
+                                color: @venta-9;
+                            }
+                        }
+                    }
+
+                    input {
+                        width: 100%;
+                        margin-right: 20px;
+                    }
+                }
+            }
+        }
+
+        .Divider_Section {
+            padding-top: @spacing;
+            .ant-divider-vertical {
+                border-color: @venta-4;
+                margin-inline: @spacing !important;
+                height: 100%;
+            }
+        }
+
+        .Folder_Section {
+            width: auto;
+            overflow-x: auto;
+        }
+    }
+    .ant-modal-content {
+        .ant-tree-list {
+            height: auto;
+        }
+
+        .ant-tree {
+            height: auto;
+            padding-right: 12px;
+        }
+    }
+}

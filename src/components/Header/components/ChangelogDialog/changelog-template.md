@@ -1,0 +1,5 @@
+#### ${CHANGELOG_TAG_NAME} (${CHANGELOG_DATE})
+
+${CHANGELOG_BODY}
+
+---

@@ -1,0 +1,30 @@
+.workflow-select() {
+    .Workflow {
+        &_Select {
+            &_Icon_Wrapper {
+                width: 26px;
+            }
+            &_Icon {
+                height: 100%;
+            }
+        }
+    }
+}
+
+.Workflow {
+    .Workflow {
+        .ant-select {
+            &-selector {
+                padding-left: 0;
+            }
+        }
+    }
+    .workflow-select();
+}
+
+.ant-select-dropdown {
+    .ant-select-item {
+        margin: 0;
+    }
+    .workflow-select();
+}
